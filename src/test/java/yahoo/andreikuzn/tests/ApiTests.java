@@ -16,7 +16,7 @@ import yahoo.andreikuzn.pages.ApiArea;
 @Layer("API Tests")
 @Owner("akuznetsov")
 @Tag("API")
-@JiraIssues({@JiraIssue("HOMEWORK-")})
+@JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование API сервиса транспортной компании Энергия")
 public class ApiTests extends ApiTestBase {
 

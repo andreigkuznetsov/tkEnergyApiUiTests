@@ -13,7 +13,7 @@ import yahoo.andreikuzn.pages.WebSite;
 @Layer("UI Tests")
 @Owner("akuznetsov")
 @Tag("Web")
-@JiraIssues({@JiraIssue("HOMEWORK-")})
+@JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование веб-сайта транспортной компании Энергия")
 public class UiTests extends UiTestBase {
 
