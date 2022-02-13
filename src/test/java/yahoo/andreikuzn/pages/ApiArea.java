@@ -34,7 +34,7 @@ public class ApiArea {
                 .header("Accept", "application/json")
                 .get(userLogin)
                 .then()
-                .spec(responseSpec200)
+                .spec(response200Spec)
                 .body(matchesJsonSchemaInClasspath("shemas/LoginGetTokenScheme.json"))
                 .extract().as(TokenResponseData.class);
 
@@ -55,7 +55,7 @@ public class ApiArea {
                         .when()
                         .post(createContractor + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec201)
+                        .spec(response201Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/SuccessCreateContractorScheme.json"))
                         .extract().as(CreateFirstContractor.class);
 
@@ -76,7 +76,7 @@ public class ApiArea {
                         .when()
                         .post(createContractor + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec201)
+                        .spec(response201Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/SuccessCreateContractorScheme.json"))
                         .extract().as(CreateSecondContractor.class);
 
@@ -97,7 +97,7 @@ public class ApiArea {
                         .when()
                         .post(createDeliveryBill + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/SuccessCreateDeliveryBillScheme.json"))
                         .extract().as(CreateInvoice.class);
 
@@ -116,7 +116,7 @@ public class ApiArea {
                         .get(getDeliveryBill + INVOICE_ID.getId() + "?token="
                                 + TOKEN_RESPONSE_DATA.getToken() + "&barcodes=false")
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .extract().as(InvoiceStatus.class);
 
         assertThat(invoiceStatus.getClientFromAgent()).isEqualTo(clientFromAgent);
@@ -145,7 +145,7 @@ public class ApiArea {
                         .delete(delDeliveryBill + INVOICE_ID.getId() + "?token="
                                 + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
                         .extract().as(DeleteAction.class);
 
@@ -163,7 +163,7 @@ public class ApiArea {
                         .get(getDeliveryBill + INVOICE_ID.getId() + "?token="
                                 + TOKEN_RESPONSE_DATA.getToken() + "&barcodes=false")
                         .then()
-                        .spec(responseSpec404)
+                        .spec(response404Spec)
                         .extract().as(DeleteConfirmAction.class);
 
         assertThat(deleteConfirmAction.getNotFoundCode()).isEqualTo(NotFoundCode);
@@ -180,7 +180,7 @@ public class ApiArea {
                         .delete(delFirstContractor + ID_FIRST_CONTRACTOR.getId()
                                 + "?token=" + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
                         .extract().as(DeleteAction.class);
 
@@ -198,7 +198,7 @@ public class ApiArea {
                         .get(getFirstContractorData + ID_FIRST_CONTRACTOR.getId()
                                 + "?token=" + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec404)
+                        .spec(response404Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/NoContactorsScheme.json"))
                         .extract().as(DeleteConfirmAction.class);
 
@@ -216,7 +216,7 @@ public class ApiArea {
                         .delete(delSecondContractor + ID_SECOND_CONTRACTOR.getId()
                                 + "?token=" + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
                         .extract().as(DeleteAction.class);
 
@@ -234,7 +234,7 @@ public class ApiArea {
                         .get(getSecondContractorData + ID_SECOND_CONTRACTOR.getId()
                                 + "?token=" + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec404)
+                        .spec(response404Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/NoContactorsScheme.json"))
                         .extract().as(DeleteConfirmAction.class);
 
@@ -250,7 +250,7 @@ public class ApiArea {
                 .header("Accept", "application/json")
                 .get(logOutAccount + TOKEN_RESPONSE_DATA.getToken() + "&allSessions=true")
                 .then()
-                .spec(responseSpec200)
+                .spec(response200Spec)
                 .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
                 .extract().as(DeleteAction.class);
 
@@ -267,7 +267,7 @@ public class ApiArea {
                 .header("Accept", "application/json")
                 .get(logOutAccount + TOKEN_RESPONSE_DATA.getToken() + "&allSessions=true")
                 .then()
-                .spec(responseSpec401)
+                .spec(response401Spec)
                 .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
                 .extract().as(LogOutAccountCheck.class);
 
@@ -284,7 +284,7 @@ public class ApiArea {
                         .header("Accept", "application/json")
                         .get(getAccountUsers + TOKEN_RESPONSE_DATA.getToken())
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .body(matchesJsonSchemaInClasspath("shemas/GetUserScheme.json"))
                         .extract().as(GetAccountUser.class);
 
@@ -304,7 +304,7 @@ public class ApiArea {
                         .header("Accept", "application/json")
                         .get("/cities?lang=ru")
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .extract().as(CityList.class);
 
         assertEquals(cityId, cityList.getCityList()[1].getId());
@@ -324,7 +324,7 @@ public class ApiArea {
                         .header("Accept", "application/json")
                         .get(searchCityByZip + cityzip)
                         .then()
-                        .spec(responseSpec200)
+                        .spec(response200Spec)
                         .extract().as(SearchCity.class);
 
         assertEquals(idCityTo, searchCity.getId());

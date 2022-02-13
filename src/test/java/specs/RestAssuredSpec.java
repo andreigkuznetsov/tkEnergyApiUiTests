@@ -18,22 +18,22 @@ public class RestAssuredSpec {
                     .log().body()
                     .header("NrgApi-DevToken", apiConfig.nrgApiDevToken());
 
-    public static ResponseSpecification responseSpec200 = new ResponseSpecBuilder()
+    public static ResponseSpecification response200Spec = new ResponseSpecBuilder()
             .log(BODY)
             .expectStatusCode(200)
             .build();
 
-    public static ResponseSpecification responseSpec201 = new ResponseSpecBuilder()
+    public static ResponseSpecification response201Spec = new ResponseSpecBuilder()
             .log(BODY)
             .expectStatusCode(201)
             .build();
 
-    public static ResponseSpecification responseSpec404 = new ResponseSpecBuilder()
+    public static ResponseSpecification response404Spec = new ResponseSpecBuilder()
             .log(BODY)
             .expectStatusCode(404)
             .build();
 
-    public static ResponseSpecification responseSpec401 = new ResponseSpecBuilder()
+    public static ResponseSpecification response401Spec = new ResponseSpecBuilder()
             .log(BODY)
             .expectStatusCode(401)
             .build();
