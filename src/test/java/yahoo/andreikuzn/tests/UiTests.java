@@ -1,11 +1,20 @@
 package yahoo.andreikuzn.tests;
 
+import annotations.JiraIssue;
+import annotations.JiraIssues;
+import annotations.Layer;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import yahoo.andreikuzn.pages.AccountArea;
 import yahoo.andreikuzn.pages.WebSite;
 
-
+@Layer("UI Tests")
+@Owner("akuznetsov")
+@Tag("Web")
+@JiraIssues({@JiraIssue("HOMEWORK-")})
+@DisplayName("Тестирование веб-сайта транспортной компании Энергия")
 public class UiTests extends UiTestBase {
 
     WebSite WebSite = new WebSite();
