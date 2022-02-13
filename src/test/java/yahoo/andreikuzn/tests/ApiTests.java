@@ -77,7 +77,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Получение списка городов обслуживания")
-    @Tags({@Tag("High"), @Tag("Regress")})
+    @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
     @Feature("Города обслуживания")
     @Story("Метод GET /cities")
@@ -92,7 +92,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Поиск города по индексу")
-    @Tags({@Tag("High"), @Tag("Regress")})
+    @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
     @Feature("Города обслуживания")
     @Story("Метод GET /search/city")
