@@ -1,0 +1,317 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "id": 0,
+      "idCity": 0,
+      "title": "string",
+      "fulltitle": "string",
+      "phone": "string",
+      "fax": "string",
+      "emailBuh": "string",
+      "email": "string",
+      "address": "string",
+      "jurAddress": "string",
+      "inn": "string",
+      "kpp": "string",
+      "bank": "string",
+      "bik": "string",
+      "rs": "string",
+      "ks": "string",
+      "discount": 0,
+      "smsphone": "string",
+      "contactPerson": "string",
+      "dateDogovor": 0,
+      "director2": "string",
+      "mainWare": 0,
+      "contractNum": "string",
+      "isJuridical": 0,
+      "debtor": 0
+    }
+  ],
+  "required": [
+    "id",
+    "idCity",
+    "title",
+    "fulltitle",
+    "phone",
+    "fax",
+    "emailBuh",
+    "email",
+    "address",
+    "jurAddress",
+    "inn",
+    "kpp",
+    "bank",
+    "bik",
+    "rs",
+    "ks",
+    "discount",
+    "smsphone",
+    "contactPerson",
+    "dateDogovor",
+    "director2",
+    "mainWare",
+    "contractNum",
+    "isJuridical",
+    "debtor"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "idCity": {
+      "$id": "#/properties/idCity",
+      "type": "integer",
+      "title": "The idCity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "The title schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "fulltitle": {
+      "$id": "#/properties/fulltitle",
+      "type": "string",
+      "title": "The fulltitle schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "phone": {
+      "$id": "#/properties/phone",
+      "type": "string",
+      "title": "The phone schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "fax": {
+      "$id": "#/properties/fax",
+      "type": "string",
+      "title": "The fax schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "emailBuh": {
+      "$id": "#/properties/emailBuh",
+      "type": "string",
+      "title": "The emailBuh schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "email": {
+      "$id": "#/properties/email",
+      "type": "string",
+      "title": "The email schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "address": {
+      "$id": "#/properties/address",
+      "type": "string",
+      "title": "The address schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "jurAddress": {
+      "$id": "#/properties/jurAddress",
+      "type": "string",
+      "title": "The jurAddress schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "inn": {
+      "$id": "#/properties/inn",
+      "type": "string",
+      "title": "The inn schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "kpp": {
+      "$id": "#/properties/kpp",
+      "type": "string",
+      "title": "The kpp schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "bank": {
+      "$id": "#/properties/bank",
+      "type": "string",
+      "title": "The bank schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "bik": {
+      "$id": "#/properties/bik",
+      "type": "string",
+      "title": "The bik schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "rs": {
+      "$id": "#/properties/rs",
+      "type": "string",
+      "title": "The rs schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "ks": {
+      "$id": "#/properties/ks",
+      "type": "string",
+      "title": "The ks schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "discount": {
+      "$id": "#/properties/discount",
+      "type": "integer",
+      "title": "The discount schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "smsphone": {
+      "$id": "#/properties/smsphone",
+      "type": "string",
+      "title": "The smsphone schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "contactPerson": {
+      "$id": "#/properties/contactPerson",
+      "type": "string",
+      "title": "The contactPerson schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "dateDogovor": {
+      "$id": "#/properties/dateDogovor",
+      "type": "integer",
+      "title": "The dateDogovor schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "director2": {
+      "$id": "#/properties/director2",
+      "type": "string",
+      "title": "The director2 schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "mainWare": {
+      "$id": "#/properties/mainWare",
+      "type": "integer",
+      "title": "The mainWare schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "contractNum": {
+      "$id": "#/properties/contractNum",
+      "type": "string",
+      "title": "The contractNum schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "string"
+      ]
+    },
+    "isJuridical": {
+      "$id": "#/properties/isJuridical",
+      "type": "integer",
+      "title": "The isJuridical schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "debtor": {
+      "$id": "#/properties/debtor",
+      "type": "integer",
+      "title": "The debtor schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    }
+  },
+  "additionalProperties": true
+}
