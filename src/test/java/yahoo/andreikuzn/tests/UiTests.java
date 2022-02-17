@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-@Layer("UI Tests")
 @Tag("Web")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование веб-сайта транспортной компании Энергия")
@@ -18,6 +17,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка отображения главной страницы сайта")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
@@ -32,6 +32,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка отображения элементов левого бокового меню")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("Web")
@@ -47,6 +48,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка поиска по сайту и отображения результатов")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
@@ -63,6 +65,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка работы виджета он-лайн калькулятора на главной странице")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
@@ -79,6 +82,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка работы виджета он-лайн отслеживания на главной странице")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
@@ -94,6 +98,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка переходов в разделы основного меню сайта")
+    @Layer("UI Tests")
     @Owner("Gleb Danilov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("Web")
@@ -115,6 +120,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка переходов и наличия контента страниц раздела \"О компании\"")
+    @Layer("UI Tests")
     @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
@@ -148,6 +154,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Авторизация в личный кабинет клиента с валидными данными")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
@@ -170,6 +177,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Авторизация в личный кабинет клиента с невалидными данными")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
@@ -200,6 +208,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка, что страницы разделов в личном кабинете открываются")
+    @Layer("UI Tests")
     @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
@@ -236,6 +245,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Создание, изменение и удаление контрагента в личном кабинете")
+    @Layer("UI Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("Nigh"), @Tag("Regress")})
     @Microservice("Web")

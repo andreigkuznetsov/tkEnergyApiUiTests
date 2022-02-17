@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import yahoo.andreikuzn.pages.ApiArea;
 
 
-@Layer("API Tests")
 @Tag("API")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование API сервиса транспортной компании Энергия")
@@ -23,6 +22,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Успешный LogIn и LogOut")
+    @Layer("API Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("API")
@@ -38,6 +38,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Создание и удаление накладной на перевозку")
+    @Layer("API Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("API")
@@ -63,6 +64,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Получение данных о пользователе аккаунта")
+    @Layer("API Tests")
     @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("API")
@@ -79,6 +81,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Получение списка городов обслуживания")
+    @Layer("API Tests")
     @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
@@ -95,6 +98,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Поиск города по индексу")
+    @Layer("API Tests")
     @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
