@@ -76,7 +76,7 @@ public class UiTests extends UiTestBase {
         WebSite.openIndexPage()
                 .checkIndexPage()
                 .checkCalcWidget(TestData.cityFrom, TestData.cityTo,
-                        TestData.weight, TestData.cargoVolume, TestData.cost);
+                        TestData.weight, TestData.cargoVolume);
 
     }
 

@@ -35,7 +35,6 @@ public class TestData {
             cityTo = "Москва",
             weight = "0.1",
             cargoVolume = "0.001",
-            cost = "300,00",
             billNumber = "7804-1422301",
             currentStatus = "Выдана: 14.01.2022, на складе \"Калуга П\"",
             clientFromAgent = "Рубов",

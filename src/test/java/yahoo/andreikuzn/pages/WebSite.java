@@ -105,9 +105,9 @@ public class WebSite {
 
     @Step("Проверяем работу виджета рассчета стоимости доставки")
     public WebSite checkCalcWidget(String cityFrom, String cityTo,
-                                   String weight, String cargoVolume, String cost) {
+                                   String weight, String cargoVolume) {
         CalcWidgetCheck.checkCalcWidget(cityFrom, cityTo,
-                weight, cargoVolume, cost);
+                weight, cargoVolume);
 
         return this;
     }
