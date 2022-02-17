@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 @Layer("UI Tests")
-@Owner("Andrei Kuznetsov")
 @Tag("Web")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование веб-сайта транспортной компании Энергия")
@@ -19,6 +18,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка отображения главной страницы сайта")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Главная страница веб-сайта")
@@ -32,6 +32,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка отображения элементов левого бокового меню")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Левое боковое меню навигации")
@@ -46,6 +47,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка поиска по сайту и отображения результатов")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Поиск по сайту")
@@ -61,6 +63,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка работы виджета он-лайн калькулятора на главной странице")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Виджет он-лайн калькулятора")
@@ -76,6 +79,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка работы виджета он-лайн отслеживания на главной странице")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Виджет он-лайн отслеживания")
@@ -90,9 +94,9 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка переходов в разделы основного меню сайта")
+    @Owner("Gleb Danilov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("Web")
-    @Owner("Gleb Danilov")
     @Feature("Основное меню веб-сайта")
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.CRITICAL)
@@ -111,9 +115,9 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка переходов и наличия контента страниц раздела \"О компании\"")
+    @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
-    @Owner("Gleb Danilov")
     @Feature("Меню раздела О компании веб-сайта")
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.NORMAL)
@@ -144,6 +148,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Авторизация в личный кабинет клиента с валидными данными")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Авторизация")
@@ -165,6 +170,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Авторизация в личный кабинет клиента с невалидными данными")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Авторизация")
@@ -194,9 +200,9 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Проверка, что страницы разделов в личном кабинете открываются")
+    @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("Web")
-    @Owner("Gleb Danilov")
     @Feature("Разделы в личном кабинете пользователя")
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.NORMAL)
@@ -230,6 +236,7 @@ public class UiTests extends UiTestBase {
 
     @Test
     @DisplayName("Создание, изменение и удаление контрагента в личном кабинете")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("Nigh"), @Tag("Regress")})
     @Microservice("Web")
     @Feature("Клиенты и контагенты пользователя личного кабинета")

@@ -14,7 +14,6 @@ import yahoo.andreikuzn.pages.ApiArea;
 
 
 @Layer("API Tests")
-@Owner("Andrei Kuznetsov")
 @Tag("API")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование API сервиса транспортной компании Энергия")
@@ -24,6 +23,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Успешный LogIn и LogOut")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("API")
     @Feature("Авторизация")
@@ -38,6 +38,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Создание и удаление накладной на перевозку")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Regress")})
     @Microservice("API")
     @Feature("Накладная на перевозку")
@@ -62,6 +63,7 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Получение данных о пользователе аккаунта")
+    @Owner("Andrei Kuznetsov")
     @Tags({@Tag("High"), @Tag("Smoke"), @Tag("Regress")})
     @Microservice("API")
     @Feature("Пользователь аккаунта")
@@ -77,9 +79,9 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Получение списка городов обслуживания")
+    @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
-    @Owner("Gleb Danilov")
     @Feature("Города обслуживания")
     @Story("Метод GET /cities")
     @Severity(SeverityLevel.NORMAL)
@@ -93,9 +95,9 @@ public class ApiTests extends ApiTestBase {
 
     @Test
     @DisplayName("Поиск города по индексу")
+    @Owner("Gleb Danilov")
     @Tags({@Tag("Low"), @Tag("Regress")})
     @Microservice("API")
-    @Owner("Gleb Danilov")
     @Feature("Города обслуживания")
     @Story("Метод GET /search/city")
     @Severity(SeverityLevel.NORMAL)
