@@ -259,7 +259,7 @@ public class ApiArea {
 
     }
 
-    @Step("Проверка успешного выхода из аккаута")
+    @Step("Проверка успешного выхода из аккаунта")
     public void logOutAccountCheck() {
 
         LogOutAccountCheck logOutAccountCheck
