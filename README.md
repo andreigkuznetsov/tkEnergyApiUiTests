@@ -1,16 +1,39 @@
-# Примеры UI автотестов для Android приложения Wikipedia (build 2.5.194-alpha-2017-05-30)
+# Проект с автотестами для API-сервиса и UI-части веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
+
+![TK_Energy](/img/logo/energy_logo.png)
 
 ## Cписок автоматизированных тест-кейсов в данном проекте:
 
-- [x] Переключение между экранами Getting Started и проверка, что переход выполнен  
-- [x] Добавление русского языка и проверка его наличия в списке
-- [x] Выключение передачи анонимных данных о пользователе приложения и проверка, что передача выключена 
+### UI тесты:
+
+- [x] Проверка отображения главной страницы сайта  
+- [x] Проверка поиска по сайту и отображения результатов
+- [x] Проверка отображения элементов левого бокового меню
+- [x] Проверка работы виджета он-лайн калькулятора на главной странице 
+- [x] Проверка работы виджета он-лайн отслеживания на главной странице
+- [x] Проверка переходов в разделы основного меню сайта
+- [x] Проверка переходов и наличия контента страниц раздела "О компании"
+- [x] Авторизация в личный кабинет клиента с валидными данными
+- [x] Авторизация в личный кабинет клиента с невалидными данными
+- [x] Проверка, что страницы разделов в личном кабинете открываются
+- [x] Создание, изменение и удаление контрагента в личном кабинете*
+
+### API тесты:
+
+- [x] Успешный LogIn и LogOut (личный кабинет пользователя)
+- [x] Создание и удаление адресата
+- [x] Создание и удаление накладной на перевозку
+- [x] Получение данных о пользователе аккаунта
+- [x] Получение списка городов обслуживания
+- [x] Поиск города обслуживания по почтовому индексу
+
+* - автотесты построены таким образом, что все сущности, создаются и удаляются в ходе выполнения тест-кейсов.  
 
 ## Стек технологий:
 
-![Intelij_IDEA](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![Appium](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Appium.png)![Browserstack](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Browserstack.png)![Rest-Assured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
+![Intelij_IDEA](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![RestAssured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
 
-Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, TestOps, Appium, Browserstack, RestAssured, Telegram (уведомления), Jira
+Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, Jenkins, RestAssured, Telegram (уведомления), Jira
 
 ## Запуск тестов с заполненными конфигурационными файлами *.properties:
 
