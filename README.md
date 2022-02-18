@@ -31,7 +31,7 @@
 
 ## Стек технологий:
 
-![Intelij_IDEA](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![RestAssured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
+![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![RestAssured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
 
 <b>Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
 #
@@ -149,11 +149,7 @@ COMMENT - комментарий, который отображается в с�
 
 #### Дашборд с аналитикой по команде
 
-![testops_stages_dashboard](...)
-
-#### Дашборд с аналитикой по команде
-
-![testops_stages_dashboard](...)
+![testops_team_dashboard](...)
 
 #### Результаты запусков тестовых прогонов
 
