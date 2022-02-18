@@ -31,7 +31,7 @@
 
 ## Стек технологий:
 
-![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java]/img/logo/Java.png)![Selenide](/img/logo/Selenide.png)![Selenoid](/img/logo/Selenoid.png)![Gradle](/img/logo/Gradle.png)![JUnit5](/img/logo/JUnit5.png)![Allure Report](/img/logo/Allure_Report.png)![AllureTestOps](/img/logo/AllureTestOps.png)![Github](/img/logo/Github.png)![Jenkins](/img/logo/Jenkins.png)![RestAssured](/img/logo/Rest-Assured.png)![Telegram](/img/logo/Telegram.png)![Jira](/img/logo/Jira.png)
+![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java](/img/logo/Java.png)![Selenide](/img/logo/Selenide.png)![Selenoid](/img/logo/Selenoid.png)![Gradle](/img/logo/Gradle.png)![JUnit5](/img/logo/JUnit5.png)![Allure Report](/img/logo/Allure_Report.png)![AllureTestOps](/img/logo/AllureTestOps.png)![Github](/img/logo/Github.png)![Jenkins](/img/logo/Jenkins.png)![RestAssured](/img/logo/Rest-Assured.png)![Telegram](/img/logo/Telegram.png)![Jira](/img/logo/Jira.png)
 
 <b>Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
 #
