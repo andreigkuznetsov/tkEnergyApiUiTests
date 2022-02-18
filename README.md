@@ -33,7 +33,7 @@
 
 ![Intelij_IDEA](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![RestAssured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
 
-Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira
+<b>Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
 #
 - В данном проекте автотесты написаны на <b>Java</b> с использованием фреймворка <b>Selenide</b> для UI-тестов и библиотеки <b>REST-Assured</b> для API-тестов.
 
