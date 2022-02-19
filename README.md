@@ -171,8 +171,11 @@ COMMENT - комментарий, который отображается в с�
 ## Интеграция с Telegram:
 ### После прохождения тестов, в telegram канал приходит оповещение с результами
 
-![telegramm_results_1](...) ![telegramm_results_2](...)
+<p align="left">
+  <img src="/img/pics/telegram_results_1.jpg" alt="Telegram" width="440">
+  <img src="/img/pics/telegram_results_2.jpg" alt="Telegram" width="381">
+</p>
 
 ## Пример запуска и прохождения UI теста на видео: 
 
-![selenoid_video](...)
+![selenoid_video](/img/pics/selenoid_video.gif)
