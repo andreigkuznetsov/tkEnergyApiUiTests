@@ -1,8 +1,8 @@
 package yahoo.andreikuzn.tests;
 
 import com.github.javafaker.Faker;
-import java.util.Locale;
 
+import java.util.Locale;
 
 
 public class TestData {
@@ -62,66 +62,26 @@ public class TestData {
             idCityTo = 495,
             priceFreight = 300,
             cityType = 3,
-            cityDefaultIdWare = 0;
+            cityDefaultIdWare = 0,
+            createDate = 0,
+            modifyDate = 0,
+            serviceFrom = 0,
+            invoice_weight = 0,
+            volume = 0,
+            cargotype = 0,
+            isDelivery = 0,
+            isZayavka = 0,
+            requestDate = 0,
+            idTripType = 0,
+            place = 0,
+            isSpCityFrom = 0,
+            isSpCityTo = 0,
+            isSpFreight = 0,
+            isSpServiceFrom = 0,
+            declaredCargoPrice = 0;
 
     public static Long cityId = 41322021L,
             cityParentId = 41322L;
-
-    public static String firstContractorData = "{\"title\":\"" + TestData.lastName + "\",\n" +
-            "    \"fullTitle\": \"" + TestData.name + "\",\n" +
-            "    \"idCity\": \""+ idCityFrom + "\",\n" +
-            "    \"address\": \""+ TestData.address + "\",\n" +
-            "    \"phone\": \"+7" + TestData.phone + "\",\n" +
-            "    \"email\": \""+ TestData.phone + "\",\n" +
-            "    \"inn\": \"" + TestData.inn + "\",\n" +
-            "    \"kpp\": \""+ TestData.kpp + "\",\n" +
-            "    \"jurAddress\": \""+ TestData.juraddress + "\",\n" +
-            "    \"createDate\": 0,\n" +
-            "    \"modifyDate\": 0}";
-
-    public static String secondContractorData = "{\"title\":\"" + TestData.lastnamem + "\",\n" +
-            "    \"fullTitle\": \"" + TestData.namem + "\",\n" +
-            "    \"idCity\": \"" + idCityTo + "\",\n" +
-            "    \"address\": \""+ TestData.addressm + "\",\n" +
-            "    \"phone\": \"+7" + TestData.phonem + "\",\n" +
-            "    \"email\": \""+ TestData.emailm + "\",\n" +
-            "    \"inn\": \"" + TestData.innm + "\",\n" +
-            "    \"kpp\": \""+ TestData.kppm + "\",\n" +
-            "    \"jurAddress\": \""+ TestData.juraddressm + "\",\n" +
-            "    \"createDate\": 0,\n" +
-            "    \"modifyDate\": 0}";
-
-    public static String getDelliveryBillData(Long firstContractorId, Long secondContractorId) {
-        return "{\n" +
-            "  \"clientFromAgent\":\"" + clientFromAgent + "\",\n" +
-            "  \"idClientFrom\":" + firstContractorId + ",\n" +
-            "  \"idClientTo\":" + secondContractorId + ",\n" +
-            "  \"idCityFrom\":" + idCityFrom + ",\n" +
-            "  \"idCityTo\":" + idCityTo + ",\n" +
-            "  \"idWareFrom\": 0,\n" +
-            "  \"idWareTo\": 0,\n" +
-            "  \"description\":\"" + description + "\",\n" +
-            "  \"serviceFrom\": 0,\n" +
-            "  \"weight\": 0,\n" +
-            "  \"volume\": 0,\n" +
-            "  \"packaging\":\"" + packaging + "\",\n" +
-            "  \"cargoname\":\"" + cargoname + "\",\n" +
-            "  \"cargotype\": 0,\n" +
-            "  \"isDelivery\": 0,\n" +
-            "  \"isZayavka\": 0,\n" +
-            "  \"requestDate\": 0,\n" +
-            "  \"idTripType\": 0,\n" +
-            "  \"place\": 0,\n" +
-            "  \"isSpCityFrom\": 0,\n" +
-            "  \"isSpCityTo\": 0,\n" +
-            "  \"isSpFreight\": 0,\n" +
-            "  \"isSpServiceFrom\": 0,\n" +
-            "  \"isSpFee\": 0,\n" +
-            "  \"addressRequest\":\"" + addressname + "\",\n" +
-            "  \"addressDelivery\":\"" + addressname + "\",\n" +
-            "  \"declaredCargoPrice\": 0\n" +
-            "}";
-    }
 
 }
 

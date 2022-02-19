@@ -19,12 +19,75 @@ public class ApiArea {
     public static final CreateFirstContractor ID_FIRST_CONTRACTOR = new CreateFirstContractor();
     public static final CreateSecondContractor ID_SECOND_CONTRACTOR = new CreateSecondContractor();
     public static final CreateInvoice INVOICE_ID = new CreateInvoice();
+    public static final FirstContractorData FIRST_CONTRACTOR_DATA = new FirstContractorData();
+    public static final SecondContractorData SECOND_CONTRACTOR_DATA = new SecondContractorData();
+    public static final InvoiceData INVOICE_DATA = new InvoiceData();
 
     public static final String LOGIN = apiConfig.login();
     public static final String PASSWORD = apiConfig.password();
     public static final String ACCOUNT_ID = apiConfig.accountId();
     public static final String ACCOUNT_USER_ID = apiConfig.accountUserId();
     public static final String ACCOUNT_USER_PHONE = apiConfig.accountUserPhone();
+
+    public static FirstContractorData setFirstContractorData() {
+        FIRST_CONTRACTOR_DATA.setTitle(lastName);
+        FIRST_CONTRACTOR_DATA.setFullTitle(name);
+        FIRST_CONTRACTOR_DATA.setIdCity(idCityFrom);
+        FIRST_CONTRACTOR_DATA.setAddress(address);
+        FIRST_CONTRACTOR_DATA.setPhone(phone);
+        FIRST_CONTRACTOR_DATA.setEmail(email);
+        FIRST_CONTRACTOR_DATA.setInn(inn);
+        FIRST_CONTRACTOR_DATA.setKpp(kpp);
+        FIRST_CONTRACTOR_DATA.setJurAddress(juraddress);
+        FIRST_CONTRACTOR_DATA.setCreateDate(createDate);
+        FIRST_CONTRACTOR_DATA.setModifyDate(modifyDate);
+        return FIRST_CONTRACTOR_DATA;
+    }
+
+    public static SecondContractorData setSecondContractorData() {
+        SECOND_CONTRACTOR_DATA.setTitle(lastnamem);
+        SECOND_CONTRACTOR_DATA.setFullTitle(namem);
+        SECOND_CONTRACTOR_DATA.setIdCity(idCityTo);
+        SECOND_CONTRACTOR_DATA.setAddress(addressm);
+        SECOND_CONTRACTOR_DATA.setPhone(phonem);
+        SECOND_CONTRACTOR_DATA.setEmail(emailm);
+        SECOND_CONTRACTOR_DATA.setInn(innm);
+        SECOND_CONTRACTOR_DATA.setKpp(kppm);
+        SECOND_CONTRACTOR_DATA.setJurAddress(juraddressm);
+        SECOND_CONTRACTOR_DATA.setCreateDate(createDate);
+        SECOND_CONTRACTOR_DATA.setModifyDate(modifyDate);
+        return SECOND_CONTRACTOR_DATA;
+    }
+
+    public static InvoiceData setInvoiceData() {
+        INVOICE_DATA.setClientFromAgent(clientFromAgent);
+        INVOICE_DATA.setIdClientFrom(ID_FIRST_CONTRACTOR.getId());
+        INVOICE_DATA.setIdClientTo(ID_SECOND_CONTRACTOR.getId());
+        INVOICE_DATA.setIdCityFrom(idCityFrom);
+        INVOICE_DATA.setIdCityTo(idCityTo);
+        INVOICE_DATA.setIdWareFrom(idWareFrom);
+        INVOICE_DATA.setIdWareTo(idWareTo);
+        INVOICE_DATA.setDescription(description);
+        INVOICE_DATA.setServiceFrom(serviceFrom);
+        INVOICE_DATA.setWeight(invoice_weight);
+        INVOICE_DATA.setVolume(volume);
+        INVOICE_DATA.setPackaging(packaging);
+        INVOICE_DATA.setCargoname(cargoname);
+        INVOICE_DATA.setCargotype(cargotype);
+        INVOICE_DATA.setIsDelivery(isDelivery);
+        INVOICE_DATA.setIsZayavka(isZayavka);
+        INVOICE_DATA.setRequestDate(requestDate);
+        INVOICE_DATA.setIdTripType(idTripType);
+        INVOICE_DATA.setPlace(place);
+        INVOICE_DATA.setIsSpCityFrom(isSpCityFrom);
+        INVOICE_DATA.setIsSpCityTo(isSpCityTo);
+        INVOICE_DATA.setIsSpFreight(isSpFreight);
+        INVOICE_DATA.setIsSpServiceFrom(isSpServiceFrom);
+        INVOICE_DATA.setAddressRequest(addressname);
+        INVOICE_DATA.setAddressDelivery(addressname);
+        INVOICE_DATA.setDeclaredCargoPrice(declaredCargoPrice);
+        return INVOICE_DATA;
+    }
 
     @Step("Вход в аккаунт и получение токена")
     public void loginAndGetUserToken() {
@@ -51,7 +114,7 @@ public class ApiArea {
         CreateFirstContractor createFirstContractor =
                 given(requestSpec)
                         .contentType(JSON)
-                        .body(firstContractorData)
+                        .body(setFirstContractorData())
                         .when()
                         .post(createContractor + TOKEN_RESPONSE_DATA.getToken())
                         .then()
@@ -72,7 +135,7 @@ public class ApiArea {
         CreateSecondContractor createSecondContractor =
                 given(requestSpec)
                         .contentType(JSON)
-                        .body(secondContractorData)
+                        .body(setSecondContractorData())
                         .when()
                         .post(createContractor + TOKEN_RESPONSE_DATA.getToken())
                         .then()
@@ -87,13 +150,12 @@ public class ApiArea {
     }
 
     @Step("Создание накладной на перевозку")
-    public Long createDeliveryBill(Long firstContractorId, Long secondContractorId) {
+    public Long createDeliveryBill() {
 
-        String deliveryBillData = getDelliveryBillData(firstContractorId, secondContractorId);
         CreateInvoice createinvoice =
                 given(requestSpec)
                         .contentType(JSON)
-                        .body(deliveryBillData)
+                        .body(setInvoiceData())
                         .when()
                         .post(createDeliveryBill + TOKEN_RESPONSE_DATA.getToken())
                         .then()

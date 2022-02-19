@@ -34,6 +34,7 @@ dependencies {
             "org.assertj:assertj-core:3.19.0",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
+            "com.fasterxml.jackson.core:jackson-databind:2.11.2",
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",)

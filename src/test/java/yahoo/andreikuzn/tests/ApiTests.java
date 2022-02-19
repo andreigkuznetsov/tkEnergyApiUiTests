@@ -47,9 +47,9 @@ public class ApiTests extends ApiTestBase {
     @Severity(SeverityLevel.CRITICAL)
     void deliveryBillCreateDeleteTest() {
         ApiArea.loginAndGetUserToken();
-        Long firstContractorId = ApiArea.createFirstContractor();
-        Long secondContractorId = ApiArea.createSecondContractor();
-        ApiArea.createDeliveryBill(firstContractorId, secondContractorId);
+        ApiArea.createFirstContractor();
+        ApiArea.createSecondContractor();
+        ApiArea.createDeliveryBill();
         ApiArea.getDeliveryBillStatus();
         ApiArea.deleteDeliveryBill();
         ApiArea.getDeliveryBillStatusDel();
