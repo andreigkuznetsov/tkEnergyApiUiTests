@@ -1,4 +1,4 @@
-# Проект с автотестами для API-сервиса<br>и UI веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
+# Проект с автотестами<br>для API-сервиса и UI веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
 
 ![TK_Energy](/img/logo/energy_logo.png)
 
