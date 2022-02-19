@@ -1,4 +1,4 @@
-# Проект с автотестами для API-сервиса и UI веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
+# Проект с автотестами для API-сервиса<br>и UI веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
 
 ![TK_Energy](/img/logo/energy_logo.png)
 
@@ -31,7 +31,7 @@
 
 ## Стек технологий:
 
-![Intelij_IDEA](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Intelij_IDEA.png)![Java](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Java.png)![Selenide](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenide.png)![Selenoid](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Selenoid.png)![Gradle](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Gradle.png)![JUnit5](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/JUnit5.png)![Allure Report](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Allure_Report.png)![AllureTestOps](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/AllureTestOps.png)![Github](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Github.png)![Jenkins](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jenkins.png)![RestAssured](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Rest-Assured.png)![Telegram](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Telegram.png)![Jira](https://github.com/andreigkuznetsov/smallUIproject/blob/master/img/icons/Jira.png)
+![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java](/img/logo/Java.png)![Selenide](/img/logo/Selenide.png)![Selenoid](/img/logo/Selenoid.png)![Gradle](/img/logo/Gradle.png)![JUnit5](/img/logo/JUnit5.png)![Allure Report](/img/logo/Allure_Report.png)![AllureTestOps](/img/logo/AllureTestOps.png)![Github](/img/logo/Github.png)![Jenkins](/img/logo/Jenkins.png)![RestAssured](/img/logo/Rest-Assured.png)![Telegram](/img/logo/Telegram.png)![Jira](/img/logo/Jira.png)
 
 <b>Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
 #
@@ -97,17 +97,17 @@ ENVIRONMENT - тестовый стенд, на котором будут зап
 COMMENT - комментарий, который отображается в сообщении Телеграмм-бота (по умолчанию "TK Energy API and UI autotests")
 ```
 #### Для запуска сборки необходимо нажать на кнопку "Собрать с параметрами", затем, выбрать (или оставить по умолчанию) значения параметров и нажать кнопку "Собрать".
-
-![jenkins_start_window](...)
-
+#
+![jenkins_start_window](/img/pics/jenkins_start_window.png)
+#
 #### Для анализа результатов запусков в Jenkins используется Allure Reports
 
 ## Описание Allure Reports:
 
 #### После выполнения сборки, в разделе "История сборок" в строке с номером сборки появится значок Allure Report, кликнув по которому, откроется страница с сформированным отчетом по данной сборке. 
-
-![allure_start_window](...)
-
+#
+![allure_start_window](/img/pics/allure_start_window.png)
+#
 ### Пример отчета о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/09-andreikuzn-tk-energy-api-ui-tests/8/allure/)
 
 #### Overview страница Allure-отчета содержит следующие разделы:
@@ -119,21 +119,21 @@ COMMENT - комментарий, который отображается в с�
 - <b>CATEGORIES</b> - отображает распределение неуспешно прошедших тестов по видам дефектов
 - <b>FEATURES BY STORIES</b> - отображает распределение тестов по функционалу, который они проверяют
 - <b>EXECUTORS</b> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
-
-![allure_main_window](...)
-
+#
+![allure_main_window](/img/pics/allure_main_window.png)
+#
 #### На странице Suites представляется стандартное распределение выполнявшихся тестов по классам (тестовым наборам), в которых находятся тестовые методы (шаги).
 
 #### Каждый UI тестовый набор содержит скриншот, сделанный после последнего шага, видео прохождения и консольные логи браузера.
-
-![allure_overview_ui_window](...)
-
+#
+![allure_overview_ui_window](/img/pics/allure_overview_ui_window.png)
+#
 #### Каждый API тестовый набор содержит детальные данные по каждому выполненному запросу и ответу сервера.
-
-![allure_overview_api_window](...)
-
+#
+![allure_overview_api_window](/img/pics/allure_overview_api_window.png)
+#
 ## Интеграция с AllureTestOps:
-### Для отображения и анализа результатов сборок также используется [Allure TestOps](https://allure.autotests.cloud/project/1027/dashboards)
+### Для запуска автотестов, отображения и анализа результатов сборок также используется [Allure TestOps](https://allure.autotests.cloud/project/1027/dashboards)
 
 #### Overview дашборд
 
@@ -149,11 +149,7 @@ COMMENT - комментарий, который отображается в с�
 
 #### Дашборд с аналитикой по команде
 
-![testops_stages_dashboard](...)
-
-#### Дашборд с аналитикой по команде
-
-![testops_stages_dashboard](...)
+![testops_team_dashboard](...)
 
 #### Результаты запусков тестовых прогонов
 
@@ -164,13 +160,11 @@ COMMENT - комментарий, который отображается в с�
 ![testops_launches_dashboard](...)
 
 #### Пример списка тестов и их прохождения
-
-![testops_cases_dashboard](...)
-
+#
+![testops_cases_dashboard](/img/pics/testops_cases_dashboard.png)
+#
 ## Интеграция с Jira:
-### Запускаемые кейсы и их результаты можно посмотреть в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-334)
-
-#### Это основной инструмент для управления проектом, в том числе, фиксации дефектов и учета выполненных работ  
+### Запускаемые кейсы и их результаты можно добавить в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-334)
 
 ![jira_issue_334](...)
 
