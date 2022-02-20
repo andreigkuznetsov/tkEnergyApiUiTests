@@ -137,30 +137,30 @@ COMMENT - комментарий, который отображается в с�
 
 #### Overview дашборд
 
-![testops_overview_dashboard](...)
-
+![testops_overview_dashboard](/img/pics/testops_overview_dashboard.png)
+#
 #### Дашборд по типам тестов
 
-![testops_automation_dashboard](...)
-
+![testops_automation_dashboard](/img/pics/testops_automation_dashboard.png)
+#
 #### Дашборд по тестовым стендам
 
-![testops_stages_dashboard](...)
-
+![testops_stages_dashboard](/img/pics/testops_stages_dashboard.png)
+#
 #### Дашборд с аналитикой по команде
 
-![testops_team_dashboard](...)
-
+![testops_team_dashboard](/img/pics/testops_team_dashboard.png)
+#
 #### Результаты запусков тестовых прогонов
 
-![testops_launches_dashboard](...)
-
+![testops_launches_dashboard](/img/pics/testops_launches_dashboard.png)
+#
 #### Страница с test-планами
 
-![testops_launches_dashboard](...)
-
-#### Пример списка тестов и их прохождения
+![testops_testplans_dashboard](/img/pics/testops_testplans_dashboard.png)
 #
+#### Пример списка тестов и их прохождения
+
 ![testops_cases_dashboard](/img/pics/testops_cases_dashboard.png)
 #
 ## Интеграция с Jira:
