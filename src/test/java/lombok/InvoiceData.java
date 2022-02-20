@@ -27,7 +27,7 @@ public class InvoiceData {
     private int isSpFreight;
     private int isSpServiceFrom;
     private String addressRequest;
-    private  String addressDelivery;
+    private String addressDelivery;
     private int declaredCargoPrice;
 
 }

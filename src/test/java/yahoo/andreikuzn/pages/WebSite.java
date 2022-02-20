@@ -4,17 +4,16 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import configuration.WebDriverUtil;
+import io.qameta.allure.Step;
 import yahoo.andreikuzn.pages.components.CalcWidgetComponent;
 import yahoo.andreikuzn.pages.components.TrackWidgetComponent;
-
-import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-import static yahoo.andreikuzn.tests.TestData.*;
+import static yahoo.andreikuzn.tests.TestData.searchText;
 
 public class WebSite {
 

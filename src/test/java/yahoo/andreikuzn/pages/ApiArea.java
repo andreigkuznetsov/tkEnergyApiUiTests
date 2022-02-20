@@ -309,12 +309,12 @@ public class ApiArea {
 
         DeleteAction deleteAction =
                 given(requestSpec)
-                .header("Accept", "application/json")
-                .get(logOutAccount + TOKEN_RESPONSE_DATA.getToken() + "&allSessions=true")
-                .then()
-                .spec(response200Spec)
-                .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
-                .extract().as(DeleteAction.class);
+                        .header("Accept", "application/json")
+                        .get(logOutAccount + TOKEN_RESPONSE_DATA.getToken() + "&allSessions=true")
+                        .then()
+                        .spec(response200Spec)
+                        .body(matchesJsonSchemaInClasspath("shemas/DeleteActionScheme.json"))
+                        .extract().as(DeleteAction.class);
 
         assertEquals(code, deleteAction.getCode());
         assertEquals(message, deleteAction.getMessage());

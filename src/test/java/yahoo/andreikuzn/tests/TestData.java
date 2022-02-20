@@ -9,7 +9,7 @@ public class TestData {
 
     public static Faker faker = new Faker(new Locale("en"));
 
-   public static String name = faker.name().nameWithMiddle(),
+    public static String name = faker.name().nameWithMiddle(),
             lastName = faker.name().lastName(),
             address = faker.address().streetAddress(),
             phone = faker.numerify("7#########"),

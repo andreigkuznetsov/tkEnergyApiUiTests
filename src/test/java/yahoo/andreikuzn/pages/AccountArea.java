@@ -54,7 +54,7 @@ public class AccountArea {
             cityTextField = $("select[name='contractor[idCity]']"),
             addressTextField = $("input[name='contractor[address]']"),
             phoneIntField = $("input[name='contractor[phone]']"),
-            emailTextField =  $("input[name='contractor[email]']"),
+            emailTextField = $("input[name='contractor[email]']"),
             innIntField = $("input[name='contractor[inn]']"),
             kppIntField = $("input[name='contractor[kpp]']"),
             jurAddressTextField = $("input[name='contractor[jurAddress]']"),
@@ -195,7 +195,7 @@ public class AccountArea {
     @Step("Открываем страницу \"Ключ разработчика\"")
     public AccountArea openApiPage() {
         navArea.$(byText(APISECTION)).click();
-                $(byText(TOKENSECTION)).click();
+        $(byText(TOKENSECTION)).click();
         return this;
     }
 
