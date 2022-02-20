@@ -1,4 +1,4 @@
-# Проект с автотестами<br>для API-сервиса и UI веб-сайта ТК "Энергия" (https://nrg-tk.ru/)
+# Автотесты для API-сервиса и UI веб-сайта<br>ТК "Энергия" (https://nrg-tk.ru/)
 
 ![TK_Energy](/img/logo/energy_logo.png)
 
@@ -16,7 +16,7 @@
 - [x] Авторизация в личный кабинет клиента с валидными данными
 - [x] Авторизация в личный кабинет клиента с невалидными данными
 - [x] Проверка, что страницы разделов в личном кабинете открываются
-- [x] Создание, изменение и удаление контрагента в личном кабинете*
+- [x] Создание, изменение и удаление контрагента в личном кабинете<b>*</b>
 
 ### API тесты:
 
@@ -31,9 +31,9 @@
 
 ## Стек технологий:
 
-![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java](/img/logo/Java.png)![Selenide](/img/logo/Selenide.png)![Selenoid](/img/logo/Selenoid.png)![Gradle](/img/logo/Gradle.png)![JUnit5](/img/logo/JUnit5.png)![Allure Report](/img/logo/Allure_Report.png)![AllureTestOps](/img/logo/AllureTestOps.png)![Github](/img/logo/Github.png)![Jenkins](/img/logo/Jenkins.png)![RestAssured](/img/logo/Rest-Assured.png)![Telegram](/img/logo/Telegram.png)![Jira](/img/logo/Jira.png)
+![Intelij_IDEA](/img/logo/Intelij_IDEA.png)![Java](/img/logo/Java.png)![Selenide](/img/logo/Selenide.png)![Selenoid](/img/logo/Selenoid.png)![Docker](/img/logo/Docker.png)![Gradle](/img/logo/Gradle.png)![JUnit5](/img/logo/JUnit5.png)![Allure Report](/img/logo/Allure_Report.png)![AllureTestOps](/img/logo/AllureTestOps.png)![Github](/img/logo/Github.png)![Jenkins](/img/logo/Jenkins.png)![RestAssured](/img/logo/Rest-Assured.png)![Telegram](/img/logo/Telegram.png)![Jira](/img/logo/Jira.png)
 
-<b>Java, Selenide, Selenoid, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
+<b>Java, Selenide, Selenoid, Docker, Gradle, JUnit5, Allure Reports, TestOps, GitHub, Jenkins, RestAssured, Telegram (уведомления), Jira</b>
 #
 - В данном проекте автотесты написаны на <b>Java</b> с использованием фреймворка <b>Selenide</b> для UI-тестов и библиотеки <b>REST-Assured</b> для API-тестов.
 
@@ -166,7 +166,7 @@ COMMENT - комментарий, который отображается в с�
 ## Интеграция с Jira:
 ### Запускаемые кейсы и их результаты можно добавить в [Jira](https://jira.autotests.cloud/browse/HOMEWORK-334)
 
-![jira_issue_334](...)
+![jira_issue_334](/img/pics/jira_issue_334.png)
 
 ## Интеграция с Telegram:
 ### После прохождения тестов, в telegram канал приходит оповещение с результами
