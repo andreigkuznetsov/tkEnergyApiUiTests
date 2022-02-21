@@ -8,11 +8,12 @@ import tests.pages.*;
 import static configuration.WebDriverUtil.configure;
 
 public class UiTestBase {
-    Auth auth = new Auth();
-    AccountMenu accountMenu = new AccountMenu();
-    Contractor contractor = new Contractor();
-    AboutCompany aboutCompany = new AboutCompany();
-    NavigationMenu navigationMenu = new NavigationMenu();
+    AuthSteps authSteps = new AuthSteps();
+    AccountMenuSteps accountMenuSteps = new AccountMenuSteps();
+    ContractorSteps contractorSteps = new ContractorSteps();
+    AboutCompanySteps aboutCompanySteps = new AboutCompanySteps();
+    NavigationMenuSteps navigationMenuSteps = new NavigationMenuSteps();
+    MainPage mainPage = new MainPage();
 
     @BeforeAll
     static void setUp() {

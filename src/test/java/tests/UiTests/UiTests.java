@@ -25,7 +25,7 @@ public class UiTests extends UiTestBase {
     @Story("Основные страницы веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void openIndexPageTest() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
     }
 
@@ -39,9 +39,9 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.CRITICAL)
     void siteLeftMenuElementsDisplayTest() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
-        navigationMenu.checkLeftNavMenu();
+        navigationMenuSteps.checkLeftNavMenu();
     }
 
     @Test
@@ -54,9 +54,9 @@ public class UiTests extends UiTestBase {
     @Story("Функционал веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void searchAndDisplayTest() {
-        auth.openSearchPage()
+        mainPage.openSearchPage()
                 .checkSearchPage();
-        navigationMenu.typeSearchText()
+        navigationMenuSteps.typeSearchText()
                 .checkSearchResult();
     }
 
@@ -70,9 +70,9 @@ public class UiTests extends UiTestBase {
     @Story("Элементы страниц веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void calcWidgetTest() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
-        navigationMenu.checkCalcWidget(TestData.cityFrom, TestData.cityTo,
+        navigationMenuSteps.checkCalcWidget(TestData.cityFrom, TestData.cityTo,
                 TestData.weight, TestData.cargoVolume);
     }
 
@@ -86,9 +86,9 @@ public class UiTests extends UiTestBase {
     @Story("Элементы страниц веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void trackingWidgetTest() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
-        navigationMenu.checkTrackWidget(TestData.billNumber, TestData.currentStatus);
+        navigationMenuSteps.checkTrackWidget(TestData.billNumber, TestData.currentStatus);
     }
 
     @Test
@@ -101,9 +101,9 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.CRITICAL)
     void mainMenuSectionsTests() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
-        navigationMenu.openAboutPage()
+        navigationMenuSteps.openAboutPage()
                 .checkAboutPage()
                 .openServicePage()
                 .checkServicePage()
@@ -123,26 +123,26 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.NORMAL)
     void aboutSectionTests() {
-        auth.openIndexPage()
+        mainPage.openIndexPage()
                 .checkIndexPage();
-        navigationMenu.openAboutPage()
+        navigationMenuSteps.openAboutPage()
                 .checkAboutPage();
-        aboutCompany.openInfoPortalPage()
+        aboutCompanySteps.openInfoPortalPage()
                 .checkInfoPortalPage()
                 .checkInfoPortalPageContent();
-        navigationMenu.openAboutPage();
-        aboutCompany.openVacanciesPage()
+        navigationMenuSteps.openAboutPage();
+        aboutCompanySteps.openVacanciesPage()
                 .checkVacanciesPage()
                 .checkVacanciesPageContent();
-        navigationMenu.openAboutPage();
-        aboutCompany.openDocsPage()
+        navigationMenuSteps.openAboutPage();
+        aboutCompanySteps.openDocsPage()
                 .checkDocsPage()
                 .checkDocsPageContent();
-        navigationMenu.openAboutPage();
-        aboutCompany.openFaqPage()
+        navigationMenuSteps.openAboutPage();
+        aboutCompanySteps.openFaqPage()
                 .checkFaqPage();
-        navigationMenu.openAboutPage();
-        aboutCompany.openRulesPage()
+        navigationMenuSteps.openAboutPage();
+        aboutCompanySteps.openRulesPage()
                 .checkRulesPage()
                 .checkRulesPageContent();
     }
@@ -157,9 +157,9 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void authValidDataTest() {
-        auth.openIndexPage()
-                .checkIndexPage()
-                .openLoginPage()
+        mainPage.openIndexPage()
+                .checkIndexPage();
+        authSteps.openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
@@ -179,9 +179,9 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.NORMAL)
     void authInvalidDataTests() {
-        auth.openIndexPage()
-                .checkIndexPage()
-                .openLoginPage()
+        mainPage.openIndexPage()
+                .checkIndexPage();
+        authSteps.openLoginPage()
                 .checkLoginPage()
                 .submitAuthButton()
                 .checkAccountErrorPage()
@@ -209,15 +209,15 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.NORMAL)
     void accountPagesTests() {
-        auth.openIndexPage()
-                .checkIndexPage()
-                .openLoginPage()
+        mainPage.openIndexPage()
+                .checkIndexPage();
+        authSteps.openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
                 .submitAuthButton()
                 .checkAccountMainPage();
-        accountMenu.openSendReceivePage()
+        accountMenuSteps.openSendReceivePage()
                 .checkSendReceivePage()
                 .openContractorsPage()
                 .checkContractorsPage()
@@ -231,7 +231,7 @@ public class UiTests extends UiTestBase {
                 .checkProfilesPage()
                 .openPassChangePage()
                 .checkPassChangePage();
-        auth.submitlogoutButton()
+        authSteps.submitlogoutButton()
                 .checkLoginPage();
     }
 
@@ -245,22 +245,22 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void crudOperationsContractorTests() {
-        auth.openIndexPage()
-                .checkIndexPage()
-                .openLoginPage()
+        mainPage.openIndexPage()
+                .checkIndexPage();
+        authSteps.openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
                 .submitAuthButton()
                 .checkAccountMainPage();
-        accountMenu.openContractorsPage()
+        accountMenuSteps.openContractorsPage()
                 .checkContractorsPage();
-        contractor.openNewContractorFrom()
+        contractorSteps.openNewContractorFrom()
                 .createNewContractor()
                 .checkNewContractorData()
                 .changeNewContractorData()
                 .deleteNewContractorData();
-        auth.submitlogoutButton()
+        authSteps.submitlogoutButton()
                 .checkLoginPage();
     }
 }

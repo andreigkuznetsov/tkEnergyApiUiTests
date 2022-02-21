@@ -7,9 +7,8 @@ import tests.TestData;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
 
-public class Contractor {
+public class ContractorSteps {
     private final String CONTRACTORSAVEBUTTON = "Сохранить",
             PHONEFREFIX = "+7",
             SUCCESSSAVEMESSAGE = "Контрагент успешно сохранён!",
@@ -39,13 +38,13 @@ public class Contractor {
             deleteConfirmButton = $(".btn-danger");
 
     @Step("Открываем страницу форму добавления нового адресата")
-    public Contractor openNewContractorFrom() {
+    public ContractorSteps openNewContractorFrom() {
         contractorAddButton.click();
         return this;
     }
 
     @Step("Создаем нового адресата")
-    public Contractor createNewContractor() {
+    public ContractorSteps createNewContractor() {
         fullTitleTextField.setValue(TestData.firstContractorName);
         titleTextField.setValue(TestData.firstContractorLastName);
         cityTextField.click();
@@ -61,21 +60,21 @@ public class Contractor {
     }
 
     @Step("Проверяем, что новый адресат создан с правильными данными")
-    public Contractor checkNewContractorData() {
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorLastName));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorName));
-        contractorsDisplayArea.shouldHave(text(TestData.city));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorAddress));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorPhone));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorEmail));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorInn));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorKpp));
-        contractorsDisplayArea.shouldHave(text(TestData.firstContractorJurAddress));
+    public ContractorSteps checkNewContractorData() {
+        contractorsDisplayArea.shouldHave(text(TestData.firstContractorLastName))
+                .shouldHave(text(TestData.firstContractorName))
+                .shouldHave(text(TestData.city))
+                .shouldHave(text(TestData.firstContractorAddress))
+                .shouldHave(text(TestData.firstContractorPhone))
+                .shouldHave(text(TestData.firstContractorEmail))
+                .shouldHave(text(TestData.firstContractorInn))
+                .shouldHave(text(TestData.firstContractorKpp))
+                .shouldHave(text(TestData.firstContractorJurAddress));
         return this;
     }
 
     @Step("Изменяем данные нового контрагента и проверяем изменения")
-    public Contractor changeNewContractorData() {
+    public ContractorSteps changeNewContractorData() {
         editContractorButton.click();
         emailTextField.setValue(TestData.firstContractorNewEmail);
         submitButton.click();
@@ -86,7 +85,7 @@ public class Contractor {
     }
 
     @Step("Удаляем нового контрагента")
-    public Contractor deleteNewContractorData() {
+    public ContractorSteps deleteNewContractorData() {
         deleteContractorButton.click();
         accountPageHeaderArea.shouldHave(text(CONTRACTORDELETEMESSAGE));
         deleteConfirmButton.click();

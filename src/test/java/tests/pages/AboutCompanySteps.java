@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class AboutCompany {
+public class AboutCompanySteps {
     private final String INFOPORTALTEXT = "Информационный портал",
             VACANCIESTEXT = "Вакансии",
             DOCSECTIONSTEXT = "Документы",
@@ -27,85 +27,85 @@ public class AboutCompany {
             rulesContentArea = $$("div.etc-blog-post");
 
     @Step("Открываем страницу \"Информационный портал\" раздела \"О компании\"")
-    public AboutCompany openInfoPortalPage() {
+    public AboutCompanySteps openInfoPortalPage() {
         mainWebPageArea.$(byText(INFOPORTALTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Информационный портал\"")
-    public AboutCompany checkInfoPortalPage() {
+    public AboutCompanySteps checkInfoPortalPage() {
         mainWebPageArea.shouldHave(text(INFOPORTALTEXT));
         return this;
     }
 
     @Step("Проверяем наличие контента на странице \"Информационный портал\"")
-    public AboutCompany checkInfoPortalPageContent() {
+    public AboutCompanySteps checkInfoPortalPageContent() {
         infoPortalContentArea.shouldHave(sizeGreaterThan(0));
         return this;
     }
 
     @Step("Открываем страницу \"Вакансии\" раздела \"О компании\"")
-    public AboutCompany openVacanciesPage() {
+    public AboutCompanySteps openVacanciesPage() {
         mainWebPageArea.$(byText(VACANCIESTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Вакансии\"")
-    public AboutCompany checkVacanciesPage() {
+    public AboutCompanySteps checkVacanciesPage() {
         mainWebPageArea.shouldHave(text(VACANCIESTEXT));
         return this;
     }
 
     @Step("Проверяем наличие контента на странице \"Вакансии\"")
-    public AboutCompany checkVacanciesPageContent() {
+    public AboutCompanySteps checkVacanciesPageContent() {
         vacanciesContentArea.shouldHave(sizeGreaterThan(0));
         return this;
     }
 
     @Step("Открываем страницу \"Документы\" раздела \"О компании\"")
-    public AboutCompany openDocsPage() {
+    public AboutCompanySteps openDocsPage() {
         mainWebPageArea.$(byText(DOCSECTIONSTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Документы\"")
-    public AboutCompany checkDocsPage() {
+    public AboutCompanySteps checkDocsPage() {
         mainWebPageArea.shouldHave(text(DOCSECTIONSTEXT));
         return this;
     }
 
     @Step("Проверяем наличие контента на странице \"Документы\"")
-    public AboutCompany checkDocsPageContent() {
+    public AboutCompanySteps checkDocsPageContent() {
         docsContentArea.shouldHave(sizeGreaterThan(0));
         return this;
     }
 
     @Step("Открываем страницу \"Вопрос-ответ\" раздела \"О компании\"")
-    public AboutCompany openFaqPage() {
+    public AboutCompanySteps openFaqPage() {
         mainWebPageArea.$(byText(FAQTITLE)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Вопрос-ответ\"")
-    public AboutCompany checkFaqPage() {
+    public AboutCompanySteps checkFaqPage() {
         mainWebPageArea.shouldHave(text(FAQTEXT));
         return this;
     }
 
     @Step("Открываем страницу \"Правила\" раздела \"О компании\"")
-    public AboutCompany openRulesPage() {
+    public AboutCompanySteps openRulesPage() {
         mainWebPageArea.$(byText(RULESSECTIONTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Правила\"")
-    public AboutCompany checkRulesPage() {
+    public AboutCompanySteps checkRulesPage() {
         mainWebPageArea.shouldHave(text(RULESSECTIONTEXT));
         return this;
     }
     
     @Step("Проверяем наличие контента на странице \"Правила\"")
-    public AboutCompany checkRulesPageContent() {
+    public AboutCompanySteps checkRulesPageContent() {
         rulesContentArea.shouldHave(sizeGreaterThan(0));
         return this;
     }

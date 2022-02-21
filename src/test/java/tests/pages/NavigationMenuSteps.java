@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static tests.TestData.searchText;
 
-public class NavigationMenu {
+public class NavigationMenuSteps {
     private final String LEFTNAVMENUCONTENT = "Калькулятор Поиск груза Подать заявку Обратная связь Тарифы",
             ABOUTCOMPANYTEXT = "О компании",
             SERVICETITLE = "Услуги",
@@ -34,82 +34,82 @@ public class NavigationMenu {
     public TrackWidgetComponent trackWidgetComponent = new TrackWidgetComponent();
 
        @Step("Открываем страницу \"О компании\" сайта ТК Энергия")
-    public NavigationMenu openAboutPage() {
+    public NavigationMenuSteps openAboutPage() {
         headerArea.$(byText(ABOUTCOMPANYTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"О компании\"")
-    public NavigationMenu checkAboutPage() {
+    public NavigationMenuSteps checkAboutPage() {
         mainWebPageArea.shouldHave(text(ABOUTCOMPANYTEXT));
         return this;
     }
 
     @Step("Открываем страницу \"Услуги\" сайта ТК Энергия")
-    public NavigationMenu openServicePage() {
+    public NavigationMenuSteps openServicePage() {
         headerArea.$(byText(SERVICETITLE)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Услуги\"")
-    public NavigationMenu checkServicePage() {
+    public NavigationMenuSteps checkServicePage() {
         mainWebPageArea.shouldHave(text(SERVICETEXT));
         return this;
     }
 
     @Step("Открываем страницу \"Партнерам\" сайта ТК Энергия")
-    public NavigationMenu openPartnersPage() {
+    public NavigationMenuSteps openPartnersPage() {
         headerArea.$(byText(PARTNERSHIPTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Партнерам\"")
-    public NavigationMenu checkPartnersPage() {
+    public NavigationMenuSteps checkPartnersPage() {
         mainWebPageArea.shouldHave(text(PARTNERSHIPTEXT));
         return this;
     }
 
     @Step("Открываем страницу \"Конаткты\" сайта ТК Энергия")
-    public NavigationMenu openContactsPage() {
+    public NavigationMenuSteps openContactsPage() {
         headerArea.$(byText(CONTACTSTEXT)).click();
         return this;
     }
 
     @Step("Проверяем, что открылась страница \"Конаткты\"")
-    public NavigationMenu checkContactsPage() {
+    public NavigationMenuSteps checkContactsPage() {
         mainWebPageArea.shouldHave(text(CONTACTSTEXT));
         return this;
     }
 
     @Step("Вносим в поле поиска поисковое слово")
-    public NavigationMenu typeSearchText() {
+    public NavigationMenuSteps typeSearchText() {
         searchField.setValue(searchText).pressEnter();
         return this;
     }
 
     @Step("Проверяем, что поиск выдает релевантные результаты")
-    public NavigationMenu checkSearchResult() {
+    public NavigationMenuSteps checkSearchResult() {
         searchResultArea.find(Condition.text(searchText))
                 .shouldBe(Condition.visible);
         return this;
     }
 
     @Step("Проверяем работу виджета рассчета стоимости доставки")
-    public NavigationMenu checkCalcWidget(String cityFrom, String cityTo,
-                                   String weight, String cargoVolume) {
+    public NavigationMenuSteps checkCalcWidget(String cityFrom, String cityTo,
+                                               String weight, String cargoVolume) {
         calcWidgetComponent.checkCalcWidget(cityFrom, cityTo,
                 weight, cargoVolume);
         return this;
     }
 
     @Step("Проверяем работу виджета отслеживания доставки")
-    public NavigationMenu checkTrackWidget(String billNumber, String currentStatus) {
+    public NavigationMenuSteps checkTrackWidget(String billNumber, String currentStatus) {
         trackWidgetComponent.checkTrackingWidget(billNumber, currentStatus);
         return this;
     }
 
     @Step("Проверяем, что левое навигационное меню содержит правильные пункты")
-    public NavigationMenu checkLeftNavMenu() {
+    public NavigationMenuSteps checkLeftNavMenu() {
         leftNAvMenu.shouldHave(text(LEFTNAVMENUCONTENT));
         return this;
     }
