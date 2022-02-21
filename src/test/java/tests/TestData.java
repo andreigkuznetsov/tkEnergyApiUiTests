@@ -1,6 +1,7 @@
-package yahoo.andreikuzn.tests;
+package tests;
 
 import com.github.javafaker.Faker;
+import lombok.FirstContractorData;
 
 import java.util.Locale;
 
@@ -9,23 +10,23 @@ public class TestData {
 
     public static Faker faker = new Faker(new Locale("en"));
 
-    public static String name = faker.name().nameWithMiddle(),
-            lastName = faker.name().lastName(),
-            address = faker.address().streetAddress(),
-            phone = faker.numerify("7#########"),
-            email = faker.internet().emailAddress("tkenergy_client"),
-            newemail = faker.internet().emailAddress("energy_client"),
-            kpp = faker.numerify("#########"),
-            inn = faker.numerify("##########"),
-            juraddress = faker.address().streetAddress(),
-            namem = faker.name().nameWithMiddle(),
-            lastnamem = faker.name().lastName(),
-            addressm = faker.address().streetAddress(),
-            phonem = faker.numerify("7#########"),
-            emailm = faker.internet().emailAddress("energy_client"),
-            kppm = faker.numerify("#########"),
-            innm = faker.numerify("##########"),
-            juraddressm = faker.address().streetAddress();
+    public static String firstContractorName = faker.name().nameWithMiddle(),
+            firstContractorLastName = faker.name().lastName(),
+            firstContractorAddress = faker.address().streetAddress(),
+            firstContractorPhone = faker.numerify("7#########"),
+            firstContractorEmail = faker.internet().emailAddress("tkenergy_client"),
+            firstContractorNewEmail = faker.internet().emailAddress("energy_client"),
+            firstContractorKpp = faker.numerify("#########"),
+            firstContractorInn = faker.numerify("##########"),
+            firstContractorJurAddress = faker.address().streetAddress(),
+            secondContractorName = faker.name().nameWithMiddle(),
+            secondContractorLastName = faker.name().lastName(),
+            secondContractorAddress = faker.address().streetAddress(),
+            secondContractorPhone = faker.numerify("7#########"),
+            secondContractorEmail = faker.internet().emailAddress("energy_client"),
+            secondContractorKpp = faker.numerify("#########"),
+            secondContractorInn = faker.numerify("##########"),
+            secondContractorJurAddress = faker.address().streetAddress();
 
     public static String city = "Новороссийск",
             region = "Краснодарский край",
@@ -62,26 +63,8 @@ public class TestData {
             idCityTo = 495,
             priceFreight = 300,
             cityType = 3,
-            cityDefaultIdWare = 0,
-            createDate = 0,
-            modifyDate = 0,
-            serviceFrom = 0,
-            invoice_weight = 0,
-            volume = 0,
-            cargotype = 0,
-            isDelivery = 0,
-            isZayavka = 0,
-            requestDate = 0,
-            idTripType = 0,
-            place = 0,
-            isSpCityFrom = 0,
-            isSpCityTo = 0,
-            isSpFreight = 0,
-            isSpServiceFrom = 0,
-            declaredCargoPrice = 0;
+            cityDefaultIdWare = 0;
 
     public static Long cityId = 41322021L,
             cityParentId = 41322L;
-
 }
-

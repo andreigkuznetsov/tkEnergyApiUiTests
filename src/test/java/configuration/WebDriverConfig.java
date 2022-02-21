@@ -4,7 +4,6 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:config/${environment}.properties"})
 public interface WebDriverConfig extends Config {
-
     @Key("browser")
     @DefaultValue("CHROME")
     String browser();
@@ -19,5 +18,4 @@ public interface WebDriverConfig extends Config {
 
     @Key("remoteBrowserUrl")
     String remoteBrowserUrl();
-
 }

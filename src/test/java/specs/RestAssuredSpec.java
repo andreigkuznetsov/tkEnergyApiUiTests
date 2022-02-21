@@ -7,10 +7,9 @@ import io.restassured.specification.ResponseSpecification;
 import static filters.CustomLogFilter.customLogFilter;
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.BODY;
-import static yahoo.andreikuzn.tests.ApiTestBase.apiConfig;
+import static tests.apiTests.ApiTestBase.apiConfig;
 
 public class RestAssuredSpec {
-
     public static RequestSpecification requestSpec =
             with()
                     .filter(customLogFilter().withCustomTemplates())
@@ -37,8 +36,4 @@ public class RestAssuredSpec {
             .log(BODY)
             .expectStatusCode(401)
             .build();
-
 }
-
-
-

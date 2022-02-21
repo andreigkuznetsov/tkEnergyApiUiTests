@@ -31,8 +31,8 @@ dependencies {
             "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:json-schema-validator:4.3.1",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "org.assertj:assertj-core:3.19.0",
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.assertj:assertj-core:3.19.0",
             "com.github.javafaker:javafaker:1.0.2",
             "com.fasterxml.jackson.core:jackson-databind:2.11.2",
             "com.codeborne:selenide:$selenideVersion",
@@ -51,7 +51,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
 
-    systemProperty("environment", System.getProperty("environment", ""))
+    //systemProperty("environment", System.getProperty("environment", ""))
     systemProperties(System.getProperties())
     useJUnitPlatform()
 

@@ -1,17 +1,18 @@
-package yahoo.andreikuzn.tests;
+package tests.UiTests;
 
 import helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import yahoo.andreikuzn.pages.AccountArea;
-import yahoo.andreikuzn.pages.WebSite;
+import tests.pages.*;
 
 import static configuration.WebDriverUtil.configure;
 
 public class UiTestBase {
-
-    AccountArea AccountArea = new AccountArea();
-    WebSite WebSite = new WebSite();
+    Auth auth = new Auth();
+    AccountMenu accountMenu = new AccountMenu();
+    Contractor contractor = new Contractor();
+    AboutCompany aboutCompany = new AboutCompany();
+    NavigationMenu navigationMenu = new NavigationMenu();
 
     @BeforeAll
     static void setUp() {
@@ -25,5 +26,4 @@ public class UiTestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
     }
-
 }

@@ -1,19 +1,19 @@
-package yahoo.andreikuzn.pages;
+package tests.api;
 
 import io.qameta.allure.Step;
 import lombok.*;
 
-import static base.ApiEndpoints.*;
+import static tests.api.ApiEndpoints.*;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.RestAssuredSpec.*;
-import static yahoo.andreikuzn.tests.ApiTestBase.apiConfig;
-import static yahoo.andreikuzn.tests.TestData.*;
+import static tests.apiTests.ApiTestBase.apiConfig;
+import static tests.TestData.*;
 
-public class ApiArea {
+public class ApiSteps {
 
     public static final TokenResponseData TOKEN_RESPONSE_DATA = new TokenResponseData();
     public static final CreateFirstContractor ID_FIRST_CONTRACTOR = new CreateFirstContractor();
@@ -30,32 +30,28 @@ public class ApiArea {
     public static final String ACCOUNT_USER_PHONE = apiConfig.accountUserPhone();
 
     public static FirstContractorData setFirstContractorData() {
-        FIRST_CONTRACTOR_DATA.setTitle(lastName);
-        FIRST_CONTRACTOR_DATA.setFullTitle(name);
+        FIRST_CONTRACTOR_DATA.setTitle(firstContractorLastName);
+        FIRST_CONTRACTOR_DATA.setFullTitle(firstContractorName);
         FIRST_CONTRACTOR_DATA.setIdCity(idCityFrom);
-        FIRST_CONTRACTOR_DATA.setAddress(address);
-        FIRST_CONTRACTOR_DATA.setPhone(phone);
-        FIRST_CONTRACTOR_DATA.setEmail(email);
-        FIRST_CONTRACTOR_DATA.setInn(inn);
-        FIRST_CONTRACTOR_DATA.setKpp(kpp);
-        FIRST_CONTRACTOR_DATA.setJurAddress(juraddress);
-        FIRST_CONTRACTOR_DATA.setCreateDate(createDate);
-        FIRST_CONTRACTOR_DATA.setModifyDate(modifyDate);
+        FIRST_CONTRACTOR_DATA.setAddress(firstContractorAddress);
+        FIRST_CONTRACTOR_DATA.setPhone(firstContractorPhone);
+        FIRST_CONTRACTOR_DATA.setEmail(firstContractorEmail);
+        FIRST_CONTRACTOR_DATA.setInn(firstContractorInn);
+        FIRST_CONTRACTOR_DATA.setKpp(firstContractorKpp);
+        FIRST_CONTRACTOR_DATA.setJurAddress(firstContractorJurAddress);
         return FIRST_CONTRACTOR_DATA;
     }
 
     public static SecondContractorData setSecondContractorData() {
-        SECOND_CONTRACTOR_DATA.setTitle(lastnamem);
-        SECOND_CONTRACTOR_DATA.setFullTitle(namem);
+        SECOND_CONTRACTOR_DATA.setTitle(secondContractorLastName);
+        SECOND_CONTRACTOR_DATA.setFullTitle(secondContractorName);
         SECOND_CONTRACTOR_DATA.setIdCity(idCityTo);
-        SECOND_CONTRACTOR_DATA.setAddress(addressm);
-        SECOND_CONTRACTOR_DATA.setPhone(phonem);
-        SECOND_CONTRACTOR_DATA.setEmail(emailm);
-        SECOND_CONTRACTOR_DATA.setInn(innm);
-        SECOND_CONTRACTOR_DATA.setKpp(kppm);
-        SECOND_CONTRACTOR_DATA.setJurAddress(juraddressm);
-        SECOND_CONTRACTOR_DATA.setCreateDate(createDate);
-        SECOND_CONTRACTOR_DATA.setModifyDate(modifyDate);
+        SECOND_CONTRACTOR_DATA.setAddress(secondContractorAddress);
+        SECOND_CONTRACTOR_DATA.setPhone(secondContractorPhone);
+        SECOND_CONTRACTOR_DATA.setEmail(secondContractorEmail);
+        SECOND_CONTRACTOR_DATA.setInn(secondContractorInn);
+        SECOND_CONTRACTOR_DATA.setKpp(secondContractorKpp);
+        SECOND_CONTRACTOR_DATA.setJurAddress(secondContractorJurAddress);
         return SECOND_CONTRACTOR_DATA;
     }
 
@@ -68,30 +64,15 @@ public class ApiArea {
         INVOICE_DATA.setIdWareFrom(idWareFrom);
         INVOICE_DATA.setIdWareTo(idWareTo);
         INVOICE_DATA.setDescription(description);
-        INVOICE_DATA.setServiceFrom(serviceFrom);
-        INVOICE_DATA.setWeight(invoice_weight);
-        INVOICE_DATA.setVolume(volume);
         INVOICE_DATA.setPackaging(packaging);
         INVOICE_DATA.setCargoname(cargoname);
-        INVOICE_DATA.setCargotype(cargotype);
-        INVOICE_DATA.setIsDelivery(isDelivery);
-        INVOICE_DATA.setIsZayavka(isZayavka);
-        INVOICE_DATA.setRequestDate(requestDate);
-        INVOICE_DATA.setIdTripType(idTripType);
-        INVOICE_DATA.setPlace(place);
-        INVOICE_DATA.setIsSpCityFrom(isSpCityFrom);
-        INVOICE_DATA.setIsSpCityTo(isSpCityTo);
-        INVOICE_DATA.setIsSpFreight(isSpFreight);
-        INVOICE_DATA.setIsSpServiceFrom(isSpServiceFrom);
         INVOICE_DATA.setAddressRequest(addressname);
         INVOICE_DATA.setAddressDelivery(addressname);
-        INVOICE_DATA.setDeclaredCargoPrice(declaredCargoPrice);
         return INVOICE_DATA;
     }
 
     @Step("Вход в аккаунт и получение токена")
     public void loginAndGetUserToken() {
-
         TokenResponseData tokenResponseData
                 = given(requestSpec)
                 .header("Accept", "application/json")
@@ -105,12 +86,10 @@ public class ApiArea {
         assertThat(tokenResponseData.getType()).isEqualTo(type);
         assertThat(tokenResponseData.getAccountId()).isNotNull();
         TOKEN_RESPONSE_DATA.setToken(tokenResponseData.getToken());
-
     }
 
     @Step("Создание первого клиента")
     public Long createFirstContractor() {
-
         CreateFirstContractor createFirstContractor =
                 given(requestSpec)
                         .contentType(JSON)
@@ -126,12 +105,10 @@ public class ApiArea {
         assertThat(createFirstContractor.getUrl()).isNotNull();
         ID_FIRST_CONTRACTOR.setId(createFirstContractor.getId());
         return createFirstContractor.getId();
-
     }
 
     @Step("Создание второго клиента")
     public Long createSecondContractor() {
-
         CreateSecondContractor createSecondContractor =
                 given(requestSpec)
                         .contentType(JSON)
@@ -151,7 +128,6 @@ public class ApiArea {
 
     @Step("Создание накладной на перевозку")
     public Long createDeliveryBill() {
-
         CreateInvoice createinvoice =
                 given(requestSpec)
                         .contentType(JSON)
@@ -171,7 +147,6 @@ public class ApiArea {
 
     @Step("Получение данных о созданной накладной на перевозку")
     public void getDeliveryBillStatus() {
-
         InvoiceStatus invoiceStatus =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -195,12 +170,10 @@ public class ApiArea {
         assertThat(invoiceStatus.getPriceFreight()).isEqualTo(priceFreight);
         assertThat(invoiceStatus.getPackaging()).isEqualTo(packaging);
         assertThat(invoiceStatus.getCargoname()).isEqualTo(cargoname);
-
     }
 
     @Step("Удаление созданной накладной на перевозку")
     public void deleteDeliveryBill() {
-
         DeleteAction deleteAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -213,12 +186,10 @@ public class ApiArea {
 
         assertEquals(code, deleteAction.getCode());
         assertEquals(message, deleteAction.getMessage());
-
     }
 
     @Step("Подтверждение удаления накладной на перевозку")
     public void getDeliveryBillStatusDel() {
-
         DeleteConfirmAction deleteConfirmAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -230,12 +201,10 @@ public class ApiArea {
 
         assertThat(deleteConfirmAction.getNotFoundCode()).isEqualTo(NotFoundCode);
         assertThat(deleteConfirmAction.getNotFoundMessage()).isEqualTo(NotFoundMessage);
-
     }
 
     @Step("Удаление первого клиента")
     public void deleteFirstContractorUser() {
-
         DeleteAction deleteAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -248,12 +217,10 @@ public class ApiArea {
 
         assertEquals(code, deleteAction.getCode());
         assertEquals(message, deleteAction.getMessage());
-
     }
 
     @Step("Проверка удаления первого клиента")
     public void getFirstContractorData() {
-
         DeleteConfirmAction deleteConfirmAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -266,12 +233,10 @@ public class ApiArea {
 
         assertThat(deleteConfirmAction.getNotFoundCode()).isEqualTo(NotFoundCode);
         assertThat(deleteConfirmAction.getNotFoundMessage()).isEqualTo(NotFoundMessage);
-
     }
 
     @Step("Удаление второго клиента")
     public void deleteSecondContractorUser() {
-
         DeleteAction deleteAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -284,12 +249,10 @@ public class ApiArea {
 
         assertEquals(code, deleteAction.getCode());
         assertEquals(message, deleteAction.getMessage());
-
     }
 
     @Step("Проверка удаления второго клиента")
     public void getSecondContractorData() {
-
         DeleteConfirmAction deleteConfirmAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -306,7 +269,6 @@ public class ApiArea {
 
     @Step("Выход из аккаунта с закрытием всех сессий")
     public void logOutAccount() {
-
         DeleteAction deleteAction =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -318,12 +280,10 @@ public class ApiArea {
 
         assertEquals(code, deleteAction.getCode());
         assertEquals(message, deleteAction.getMessage());
-
     }
 
     @Step("Проверка успешного выхода из аккаунта")
     public void logOutAccountCheck() {
-
         LogOutAccountCheck logOutAccountCheck
                 = given(requestSpec)
                 .header("Accept", "application/json")
@@ -335,12 +295,10 @@ public class ApiArea {
 
         assertThat(logOutAccountCheck.getNotAuthCode()).isEqualTo(notAuthCode);
         assertThat(logOutAccountCheck.getNotAuthMessage()).isEqualTo(notAuthMessage);
-
     }
 
     @Step("Получение пользователя аккаунта")
     public void getAccountUser() {
-
         GetAccountUser getAccountUser =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -355,12 +313,10 @@ public class ApiArea {
         assertThat(getAccountUser.getFulltitle()).isEqualTo(accountUser);
         assertThat(getAccountUser.getPhone()).isEqualTo(ACCOUNT_USER_PHONE);
         assertThat(getAccountUser.getEmail()).isEqualTo(LOGIN);
-
     }
 
     @Step("Получение данных о городах обслуживания")
     public void getCities() {
-
         CityList cityList =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -375,12 +331,10 @@ public class ApiArea {
         assertEquals(cityDescription, cityList.getCityList()[1].getDescription());
         assertEquals(cityType, cityList.getCityList()[1].getType());
         assertEquals(cityDefaultIdWare, cityList.getCityList()[1].getDefaultIdWare());
-
     }
 
     @Step("Получение данных о валютах и текущих курсах")
     public void searchCity() {
-
         SearchCity searchCity =
                 given(requestSpec)
                         .header("Accept", "application/json")
@@ -391,7 +345,5 @@ public class ApiArea {
 
         assertEquals(idCityTo, searchCity.getId());
         assertEquals(cityToTitleS, searchCity.getName());
-
     }
-
 }

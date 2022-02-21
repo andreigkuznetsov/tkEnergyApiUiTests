@@ -1,4 +1,4 @@
-package yahoo.andreikuzn.tests;
+package tests.apiTests;
 
 
 import annotations.JiraIssue;
@@ -10,16 +10,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import yahoo.andreikuzn.pages.ApiArea;
 
 
 @Tag("API")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование API сервиса транспортной компании Энергия")
 public class ApiTests extends ApiTestBase {
-
-    ApiArea ApiArea = new ApiArea();
-
     @Test
     @DisplayName("Успешный LogIn и LogOut")
     @Layer("API Tests")
@@ -30,10 +26,9 @@ public class ApiTests extends ApiTestBase {
     @Story("Метод GET /login")
     @Severity(SeverityLevel.BLOCKER)
     void logInLogOutTest() {
-        ApiArea.loginAndGetUserToken();
-        ApiArea.logOutAccount();
-        ApiArea.logOutAccountCheck();
-
+        apiSteps.loginAndGetUserToken();
+        apiSteps.logOutAccount();
+        apiSteps.logOutAccountCheck();
     }
 
     @Test
@@ -46,20 +41,19 @@ public class ApiTests extends ApiTestBase {
     @Story("Метод POST /sendings")
     @Severity(SeverityLevel.CRITICAL)
     void deliveryBillCreateDeleteTest() {
-        ApiArea.loginAndGetUserToken();
-        ApiArea.createFirstContractor();
-        ApiArea.createSecondContractor();
-        ApiArea.createDeliveryBill();
-        ApiArea.getDeliveryBillStatus();
-        ApiArea.deleteDeliveryBill();
-        ApiArea.getDeliveryBillStatusDel();
-        ApiArea.deleteFirstContractorUser();
-        ApiArea.getFirstContractorData();
-        ApiArea.deleteSecondContractorUser();
-        ApiArea.getSecondContractorData();
-        ApiArea.logOutAccount();
-        ApiArea.logOutAccountCheck();
-
+        apiSteps.loginAndGetUserToken();
+        apiSteps.createFirstContractor();
+        apiSteps.createSecondContractor();
+        apiSteps.createDeliveryBill();
+        apiSteps.getDeliveryBillStatus();
+        apiSteps.deleteDeliveryBill();
+        apiSteps.getDeliveryBillStatusDel();
+        apiSteps.deleteFirstContractorUser();
+        apiSteps.getFirstContractorData();
+        apiSteps.deleteSecondContractorUser();
+        apiSteps.getSecondContractorData();
+        apiSteps.logOutAccount();
+        apiSteps.logOutAccountCheck();
     }
 
     @Test
@@ -72,11 +66,10 @@ public class ApiTests extends ApiTestBase {
     @Story("Метод GET /users")
     @Severity(SeverityLevel.BLOCKER)
     void accountUserTest() {
-        ApiArea.loginAndGetUserToken();
-        ApiArea.getAccountUser();
-        ApiArea.logOutAccount();
-        ApiArea.logOutAccountCheck();
-
+        apiSteps.loginAndGetUserToken();
+        apiSteps.getAccountUser();
+        apiSteps.logOutAccount();
+        apiSteps.logOutAccountCheck();
     }
 
     @Test
@@ -89,11 +82,10 @@ public class ApiTests extends ApiTestBase {
     @Story("Метод GET /cities")
     @Severity(SeverityLevel.NORMAL)
     void citiesTest() {
-        ApiArea.loginAndGetUserToken();
-        ApiArea.getCities();
-        ApiArea.logOutAccount();
-        ApiArea.logOutAccountCheck();
-
+        apiSteps.loginAndGetUserToken();
+        apiSteps.getCities();
+        apiSteps.logOutAccount();
+        apiSteps.logOutAccountCheck();
     }
 
     @Test
@@ -106,11 +98,9 @@ public class ApiTests extends ApiTestBase {
     @Story("Метод GET /search/city")
     @Severity(SeverityLevel.NORMAL)
     void searchCityTest() {
-        ApiArea.loginAndGetUserToken();
-        ApiArea.searchCity();
-        ApiArea.logOutAccount();
-        ApiArea.logOutAccountCheck();
-
+        apiSteps.loginAndGetUserToken();
+        apiSteps.searchCity();
+        apiSteps.logOutAccount();
+        apiSteps.logOutAccountCheck();
     }
-
 }

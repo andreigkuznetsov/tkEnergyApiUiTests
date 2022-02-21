@@ -2,7 +2,6 @@ package lombok;
 
 @Data
 public class SecondContractorData {
-
     private String title;
     private String fullTitle;
     private int idCity;
@@ -12,8 +11,5 @@ public class SecondContractorData {
     private String inn;
     private String kpp;
     private String jurAddress;
-    private int createDate;
-    private int modifyDate;
-
 }
 

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class InvoiceStatus {
-
     private String clientFromAgent;
     private Long idClientFrom;
     private Long idClientTo;
@@ -20,6 +19,4 @@ public class InvoiceStatus {
     private int priceFreight;
     private String packaging;
     private String cargoname;
-
-
 }

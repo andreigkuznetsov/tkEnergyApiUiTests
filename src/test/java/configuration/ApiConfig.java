@@ -8,7 +8,6 @@ import org.aeonbits.owner.Config;
         "classpath:config/secret.properties"
 })
 public interface ApiConfig extends Config {
-
     @Key("webUrl")
     @DefaultValue("https://nrg-tk.ru/")
     String getWebUrl();
@@ -38,5 +37,4 @@ public interface ApiConfig extends Config {
 
     @Key("accountUserPhone")
     String accountUserPhone();
-
 }

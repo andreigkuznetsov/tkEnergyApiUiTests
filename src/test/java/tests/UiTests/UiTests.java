@@ -1,4 +1,4 @@
-package yahoo.andreikuzn.tests;
+package tests.UiTests;
 
 import annotations.JiraIssue;
 import annotations.JiraIssues;
@@ -9,12 +9,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import tests.TestData;
 
 @Tag("Web")
 @JiraIssues({@JiraIssue("HOMEWORK-334")})
 @DisplayName("Тестирование веб-сайта транспортной компании Энергия")
 public class UiTests extends UiTestBase {
-
     @Test
     @DisplayName("Проверка отображения главной страницы сайта")
     @Layer("UI Tests")
@@ -25,9 +25,8 @@ public class UiTests extends UiTestBase {
     @Story("Основные страницы веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void openIndexPageTest() {
-        WebSite.openIndexPage()
+        auth.openIndexPage()
                 .checkIndexPage();
-
     }
 
     @Test
@@ -40,10 +39,9 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.CRITICAL)
     void siteLeftMenuElementsDisplayTest() {
-        WebSite.openIndexPage()
-                .checkIndexPage()
-                .checkLeftNavMenu();
-
+        auth.openIndexPage()
+                .checkIndexPage();
+        navigationMenu.checkLeftNavMenu();
     }
 
     @Test
@@ -56,11 +54,10 @@ public class UiTests extends UiTestBase {
     @Story("Функционал веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void searchAndDisplayTest() {
-        WebSite.openSearchPage()
-                .checkSearchPage()
-                .typeSearchText()
+        auth.openSearchPage()
+                .checkSearchPage();
+        navigationMenu.typeSearchText()
                 .checkSearchResult();
-
     }
 
     @Test
@@ -73,11 +70,10 @@ public class UiTests extends UiTestBase {
     @Story("Элементы страниц веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void calcWidgetTest() {
-        WebSite.openIndexPage()
-                .checkIndexPage()
-                .checkCalcWidget(TestData.cityFrom, TestData.cityTo,
-                        TestData.weight, TestData.cargoVolume);
-
+        auth.openIndexPage()
+                .checkIndexPage();
+        navigationMenu.checkCalcWidget(TestData.cityFrom, TestData.cityTo,
+                TestData.weight, TestData.cargoVolume);
     }
 
     @Test
@@ -90,10 +86,9 @@ public class UiTests extends UiTestBase {
     @Story("Элементы страниц веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void trackingWidgetTest() {
-        WebSite.openIndexPage()
-                .checkIndexPage()
-                .checkTrackWidget(TestData.billNumber, TestData.currentStatus);
-
+        auth.openIndexPage()
+                .checkIndexPage();
+        navigationMenu.checkTrackWidget(TestData.billNumber, TestData.currentStatus);
     }
 
     @Test
@@ -106,9 +101,9 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.CRITICAL)
     void mainMenuSectionsTests() {
-        WebSite.openIndexPage()
-                .checkIndexPage()
-                .openAboutPage()
+        auth.openIndexPage()
+                .checkIndexPage();
+        navigationMenu.openAboutPage()
                 .checkAboutPage()
                 .openServicePage()
                 .checkServicePage()
@@ -128,26 +123,26 @@ public class UiTests extends UiTestBase {
     @Story("Навигация по веб-сайту")
     @Severity(SeverityLevel.NORMAL)
     void aboutSectionTests() {
-        WebSite.openIndexPage()
-                .checkIndexPage()
-                .openAboutPage()
-                .checkAboutPage()
-                .openInfoPortalPage()
+        auth.openIndexPage()
+                .checkIndexPage();
+        navigationMenu.openAboutPage()
+                .checkAboutPage();
+        aboutCompany.openInfoPortalPage()
                 .checkInfoPortalPage()
-                .checkInfoPortalPageContent()
-                .openAboutPage()
-                .openVacanciesPage()
+                .checkInfoPortalPageContent();
+        navigationMenu.openAboutPage();
+        aboutCompany.openVacanciesPage()
                 .checkVacanciesPage()
-                .checkVacanciesPageContent()
-                .openAboutPage()
-                .openDocsPage()
+                .checkVacanciesPageContent();
+        navigationMenu.openAboutPage();
+        aboutCompany.openDocsPage()
                 .checkDocsPage()
-                .checkDocsPageContent()
-                .openAboutPage()
-                .openFaqPage()
-                .checkFaqPage()
-                .openAboutPage()
-                .openRulesPage()
+                .checkDocsPageContent();
+        navigationMenu.openAboutPage();
+        aboutCompany.openFaqPage()
+                .checkFaqPage();
+        navigationMenu.openAboutPage();
+        aboutCompany.openRulesPage()
                 .checkRulesPage()
                 .checkRulesPageContent();
     }
@@ -162,9 +157,9 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.BLOCKER)
     void authValidDataTest() {
-        WebSite.openIndexPage()
-                .checkIndexPage();
-        AccountArea.openLoginPage()
+        auth.openIndexPage()
+                .checkIndexPage()
+                .openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
@@ -172,7 +167,6 @@ public class UiTests extends UiTestBase {
                 .checkAccountMainPage()
                 .submitlogoutButton()
                 .checkLoginPage();
-
     }
 
     @Test
@@ -185,9 +179,9 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.NORMAL)
     void authInvalidDataTests() {
-        WebSite.openIndexPage()
-                .checkIndexPage();
-        AccountArea.openLoginPage()
+        auth.openIndexPage()
+                .checkIndexPage()
+                .openLoginPage()
                 .checkLoginPage()
                 .submitAuthButton()
                 .checkAccountErrorPage()
@@ -203,7 +197,6 @@ public class UiTests extends UiTestBase {
                 .typeInvalidPassword()
                 .submitAuthButton()
                 .checkAccountErrorPage();
-
     }
 
     @Test
@@ -216,15 +209,15 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.NORMAL)
     void accountPagesTests() {
-        WebSite.openIndexPage()
-                .checkIndexPage();
-        AccountArea.openLoginPage()
+        auth.openIndexPage()
+                .checkIndexPage()
+                .openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
                 .submitAuthButton()
-                .checkAccountMainPage()
-                .openSendReceivePage()
+                .checkAccountMainPage();
+        accountMenu.openSendReceivePage()
                 .checkSendReceivePage()
                 .openContractorsPage()
                 .checkContractorsPage()
@@ -237,10 +230,9 @@ public class UiTests extends UiTestBase {
                 .openProfilesPage()
                 .checkProfilesPage()
                 .openPassChangePage()
-                .checkPassChangePage()
-                .submitlogoutButton()
+                .checkPassChangePage();
+        auth.submitlogoutButton()
                 .checkLoginPage();
-
     }
 
     @Test
@@ -253,29 +245,22 @@ public class UiTests extends UiTestBase {
     @Story("Личный кабинет пользователя веб-сайта")
     @Severity(SeverityLevel.CRITICAL)
     void crudOperationsContractorTests() {
-        WebSite.openIndexPage()
-                .checkIndexPage();
-        AccountArea.openLoginPage()
+        auth.openIndexPage()
+                .checkIndexPage()
+                .openLoginPage()
                 .checkLoginPage()
                 .typeValidLogin()
                 .typeValidPassword()
                 .submitAuthButton()
-                .checkAccountMainPage()
-                .openContractorsPage()
-                .checkContractorsPage()
-                .openNewContractorFrom()
+                .checkAccountMainPage();
+        accountMenu.openContractorsPage()
+                .checkContractorsPage();
+        contractor.openNewContractorFrom()
                 .createNewContractor()
                 .checkNewContractorData()
                 .changeNewContractorData()
-                .deleteNewContractorData()
-                .submitlogoutButton()
+                .deleteNewContractorData();
+        auth.submitlogoutButton()
                 .checkLoginPage();
-
     }
-
 }
-
-
-
-
-
